@@ -1,5 +1,6 @@
-# INF8602_project
-INF8602 mini-projet
+# INF8602 mini-projet
+
+Fake website with SQL injection vulnerability for user credential retrieval, then Dirty Pipe exploit on the server.
 
 ## Setup
 
