@@ -9,11 +9,6 @@ Fake website with SQL injection vulnerability for user credential retrieval, the
 pip install flask sqlite3
 ``` 
 
-### Populate the database
-```bash
-python populate_db.py
-```
-
 ### Run the Flask app
 ```bash
 python app.py
